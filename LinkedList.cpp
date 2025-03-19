@@ -41,7 +41,7 @@ void tambahTertentu(string makanan, string rating, int posisi){
     tambah->makanan = makanan;
     tambah->rating = rating;
     
-    idx = head;
+    idx = head; // inisialisasi pinter idx untuk menunjukk ke elemen pertama(head)
     int cek = 1;
     while(cek < posisi-1){
         idx = idx->next;
@@ -53,8 +53,8 @@ void tambahTertentu(string makanan, string rating, int posisi){
 }
 
 void hapusAwal(){
-    hapus = head;
-    head = head->next;
+    hapus = head; //pointer hapus menunjuk pointer hapus ke node pertama
+    head = head->next; //memindahkan pointer head ke node berikutnya
     delete hapus;
 }
 
@@ -64,8 +64,8 @@ void hapusAkhir(){
     while (idx->next != tail){
         idx = idx->next;
     }
-    tail = idx;
-    tail->next = NULL;
+    tail = idx; //Memperbarui pointer tail untuk menunjuk ke node yang sekarang ditunjuk oleh idx.
+    tail->next = NULL; //Mengatur pointer next dari node yang sekarang ditunjuk oleh tail menjadi NULL.
     delete hapus;
 }
 
@@ -82,8 +82,8 @@ void hapusTertentu(int posisi){
         idx = idx->next;
         cek++;
     }
-    sebelum->next = idx;
-    delete hapus;
+    sebelum->next = idx; //Menghubungkan node sebelum node yang dihapus ke node setelah node yang dihapus (idx)
+    delete hapus; 
 }
 
 void printList(){
