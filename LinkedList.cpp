@@ -41,9 +41,9 @@ void tambahTertentu(string makanan, string rating, int posisi){
     tambah->makanan = makanan;
     tambah->rating = rating;
     
-    idx = head; // inisialisasi pinter idx untuk menunjukk ke elemen pertama(head)
+    idx = head; 
     int cek = 1;
-    while(cek < posisi-1){
+    while(cek < posisi-1){ 
         idx = idx->next;
         cek++;
     }
@@ -51,7 +51,7 @@ void tambahTertentu(string makanan, string rating, int posisi){
     tambah->next = idx->next;
     idx->next = tambah;
 }
-
+//untuk mengambil infotrmasi posisi satu sebelum target dan memeodifikasisanya untuk target 
 void hapusAwal(){
     hapus = head; //pointer hapus menunjuk pointer hapus ke node pertama
     head = head->next; //memindahkan pointer head ke node berikutnya
